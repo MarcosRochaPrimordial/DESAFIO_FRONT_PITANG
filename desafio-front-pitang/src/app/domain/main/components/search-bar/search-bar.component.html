@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <form [formGroup]="form">
+        <mat-form-field appearance="outline" class="col-12">
+            <mat-label>Pesquisar</mat-label>
+            <input matInput formControlName="search" placeholder="Pesquise por usuários ou repositórios..." >
+            <button mat-button matSuffix mat-icon-button aria-label="Search" [disabled]="!Search.value" (click)="search()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+    </form>
+</div>

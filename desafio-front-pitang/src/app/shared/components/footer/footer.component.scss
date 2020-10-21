@@ -1,0 +1,17 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: flex-end;
+    p {
+        margin-top: 20px;
+        margin-right: 10px;
+        font-size: 9pt;
+        span {
+            font-weight: bold;
+        }
+    }
+}
