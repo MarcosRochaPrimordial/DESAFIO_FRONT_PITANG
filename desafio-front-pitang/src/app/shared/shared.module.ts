@@ -8,10 +8,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MessageComponent } from './components/message/message.component';
 
 const components = [
   HeaderComponent,
   FooterComponent,
+  MessageComponent,
 ];
 
 const modules = [
@@ -22,6 +25,7 @@ const modules = [
   MatButtonModule,
   FormsModule,
   ReactiveFormsModule,
+  MatSnackBarModule,
 ];
 
 @NgModule({

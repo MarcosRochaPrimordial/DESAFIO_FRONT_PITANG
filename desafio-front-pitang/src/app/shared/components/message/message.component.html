@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-9 mt10">
+        {{ message }}
+    </div>
+    <div class="col-3" *ngIf="!!action">
+        <button mat-button color="primary" (click)="actionClick()">
+            {{ action }}
+        </button>
+    </div>
+</div>

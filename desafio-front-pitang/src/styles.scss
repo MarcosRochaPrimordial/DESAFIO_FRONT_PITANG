@@ -1,5 +1,6 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
+@import './style-variables.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -9,4 +10,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .mt15 {
     margin-top: 15px;
+}
+
+.centering-row-content {
+    justify-content: center;
+}
+
+.bg-color-error {
+    background-color: $bg-color-error;
+}
+
+.font-color-error {
+    color: $font-color-error;
 }
