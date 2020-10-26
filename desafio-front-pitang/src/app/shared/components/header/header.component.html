@@ -1,3 +1,29 @@
 <mat-toolbar color="primary">
-    <span>Desafio Frontend Pitang</span>
+    <mat-toolbar-row>
+        <span>Desafio Frontend Pitang</span>
+        <ul class="row navigation-first-row">
+            <li>
+                <button mat-button routerLink="/">Home</button>
+            </li>
+            <li>
+                <button mat-button routerLink="/records">Histórico</button>
+            </li>
+            <li>
+                <button mat-button routerLink="/ranking">Ranking</button>
+            </li>
+        </ul>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="navigation-second-row">
+        <ul class="row centering-row-content">
+            <li>
+                <button mat-button routerLink="/">Home</button>
+            </li>
+            <li>
+                <button mat-button routerLink="/records">Histórico</button>
+            </li>
+            <li>
+                <button mat-button routerLink="/ranking">Ranking</button>
+            </li>
+        </ul>
+    </mat-toolbar-row>
 </mat-toolbar>

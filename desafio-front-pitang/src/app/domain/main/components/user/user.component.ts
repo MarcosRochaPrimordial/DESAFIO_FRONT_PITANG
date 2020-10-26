@@ -26,8 +26,8 @@ export class UserComponent implements OnInit {
   pageEvent: PageEvent;
   pageSizeOptions: number[] = [5, 10, 25, 100];
   columnDefs = [
-    { field: 'id', headerName: 'Id', sortable: false },
-    { field: 'login', headerName: 'Nome', sortable: false, tooltipField: 'name', minWidth: 400 },
+    { field: 'id', headerName: 'Id', sortable: false, minWidth: 100, flex: 1 },
+    { field: 'login', headerName: 'Nome', sortable: false, tooltipField: 'name', flex: 2 },
   ];
 
   constructor(

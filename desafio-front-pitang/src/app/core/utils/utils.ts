@@ -7,6 +7,14 @@ export class Utils {
         sessionStorage.setItem(sessionName, JSON.stringify(storage));
     }
 
+    public static getSession(sessionName: string): any {
+        const storage = sessionStorage.getItem(sessionName);
+        if (!!storage) {
+            return JSON.parse(storage);
+        }
+        return [];
+    }
+
     public static getLast(sessionName: string): any {
         const storage = sessionStorage.getItem(sessionName);
         if (!!storage) {

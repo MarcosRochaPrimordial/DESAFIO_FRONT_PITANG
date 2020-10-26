@@ -11,7 +11,7 @@ import { RepositoryModel, RepositoryResponseModel } from '@core/models/repositor
 })
 export class GithubService {
 
-  private URL_PRINCIPAL: string = 'https://api.github.com';
+  private MAIN_URL: string = 'https://api.github.com';
 
   constructor(
     private http: HttpClient,
@@ -22,13 +22,13 @@ export class GithubService {
       .set('q', searchWord)
       .set('per_page', perPage.toString())
       .set('page', page.toString());
-    return this.http.get<UserResponseModel>(`${this.URL_PRINCIPAL}/search/users`, {
+    return this.http.get<UserResponseModel>(`${this.MAIN_URL}/search/users`, {
       params: httpParams,
     });
   }
 
   public getUserDetails(login: string): Observable<UserDetailModel> {
-    return this.http.get<UserDetailModel>(`${this.URL_PRINCIPAL}/users/${login}`);
+    return this.http.get<UserDetailModel>(`${this.MAIN_URL}/users/${login}`);
   }
 
   public getRepositories(searchWord: string, order: string = 'desc', perPage: number = 10, page: number = 1): Observable<RepositoryResponseModel> {
@@ -38,12 +38,12 @@ export class GithubService {
       .set('per_page', perPage.toString())
       .set('page', page.toString())
       .set('order', order);
-    return this.http.get<RepositoryResponseModel>(`${this.URL_PRINCIPAL}/search/repositories`, {
+    return this.http.get<RepositoryResponseModel>(`${this.MAIN_URL}/search/repositories`, {
       params: httpParams,
     });
   }
 
   public getRepositoriesByLogin(login: string): Observable<RepositoryModel[]> {
-    return this.http.get<RepositoryModel[]>(`${this.URL_PRINCIPAL}/users/${login}/repos`);
+    return this.http.get<RepositoryModel[]>(`${this.MAIN_URL}/users/${login}/repos`);
   }
 }

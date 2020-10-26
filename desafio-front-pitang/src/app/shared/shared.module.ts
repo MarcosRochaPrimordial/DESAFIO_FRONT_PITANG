@@ -15,6 +15,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { MatSelectModule } from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RouterModule } from '@angular/router';
 
 const components = [
   HeaderComponent,
@@ -36,6 +37,7 @@ const modules = [
   MatSelectModule,
   MatPaginatorModule,
   MatProgressSpinnerModule,
+  RouterModule
 ];
 
 @NgModule({
