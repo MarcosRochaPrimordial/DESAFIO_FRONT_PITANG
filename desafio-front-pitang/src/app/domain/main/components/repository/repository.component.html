@@ -1,1 +1,23 @@
-<p>repository works!</p>
+<div class="m10">
+    <div class="row left-row-content mr5" *ngIf="!userRepositories">
+        <mat-form-field appearance="outline" class="col-12 col-sm-5 col-md-3">
+            <mat-label>Ordem</mat-label>
+            <mat-select [(value)]="order" (selectionChange)="onOrderSelectionChange()">
+                <mat-option value="asc">
+                    Crescente
+                </mat-option>
+                <mat-option value="desc">
+                    Decrescente
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <ag-grid-angular style="width: 100%" [ngStyle]="{'height': !userRepositories ? '43vh' : '41vh'}"
+        class="ag-theme-alpine" [rowData]="repositoryList" [columnDefs]="columnDefs">
+    </ag-grid-angular>
+    <div class="mt10" *ngIf="!userRepositories">
+        <mat-paginator #paginator [length]="pageEvent.length" [pageSize]="pageEvent.pageSize"
+            [pageIndex]="pageEvent.pageIndex" [pageSizeOptions]="pageSizeOptions" (page)="updatePageEvent($event)">
+        </mat-paginator>
+    </div>
+</div>

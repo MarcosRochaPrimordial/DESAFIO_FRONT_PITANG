@@ -9,7 +9,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MessageComponent } from './components/message/message.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const components = [
   HeaderComponent,
@@ -26,6 +31,11 @@ const modules = [
   FormsModule,
   ReactiveFormsModule,
   MatSnackBarModule,
+  MatTabsModule,
+  AgGridModule,
+  MatSelectModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
 ];
 
 @NgModule({

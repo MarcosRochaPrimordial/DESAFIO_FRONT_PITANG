@@ -1,0 +1,21 @@
+<div class="container-fluid mt20" *ngIf="!!userDetails">
+    <div class="row centering-row-content">
+        <img [src]="userDetails?.avatar_url" class="avatar">
+    </div>
+    <div class="row centering-row-content mt10">
+        <h2>{{ userDetails?.name }}</h2>
+    </div>
+    <div class="row centering-row-content mtn20">
+        <span class="subtitle">{{ userDetails?.login }}</span>
+    </div>
+    <div class="row centering-row-content mt10">
+        <div class="col-12 col-sm-8 col-md-5 center-text">
+            <span>{{ userDetails?.bio }}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <app-repository [userRepositories]="true" [repository]="repositories"></app-repository>
+        </div>
+    </div>
+</div>

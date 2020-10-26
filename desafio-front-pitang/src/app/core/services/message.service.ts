@@ -12,11 +12,12 @@ export class MessageService {
   ) { }
 
   public errorMessage(error: string, duration: number) {
-    this.snackBarService.openFromComponent(MessageComponent, {
+    const snackbar = this.snackBarService.openFromComponent(MessageComponent, {
       duration: duration * 1000,
       data: {
         message: error,
-        action: 'Ok'
+        action: 'Ok',
+        actionClick: () => snackbar.dismiss(),
       },
       panelClass: ['bg-color-error', 'font-color-error']
     });

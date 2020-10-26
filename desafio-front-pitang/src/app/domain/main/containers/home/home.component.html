@@ -1,7 +1,31 @@
 <div class="container-fluid mt15">
     <div class="row centering-row-content">
-        <div class="col-6">
-            <app-search-bar (searchButtonPressed)="search($event)"></app-search-bar>
+        <div class="col-12 col-sm-12 col-md-6">
+            <div class="container-fluid">
+                <form [formGroup]="form">
+                    <mat-form-field appearance="outline" class="col-12">
+                        <mat-label>Pesquisar</mat-label>
+                        <input matInput formControlName="search" placeholder="Pesquise por repositórios ou usuários...">
+                        <button mat-button matSuffix mat-icon-button aria-label="Search" [disabled]="!Search.value"
+                            (click)="search(Search.value)">
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row centering-row-content">
+        <div class="col-12">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Repositorios">
+                    <app-repository (getRepositoriesOutput)="getRepositories($event)" [repository]="repository">
+                    </app-repository>
+                </mat-tab>
+                <mat-tab label="Usuários">
+                    <app-user (getUserOutput)="getUser($event)" [user]="user"></app-user>
+                </mat-tab>
+            </mat-tab-group>
         </div>
     </div>
 </div>

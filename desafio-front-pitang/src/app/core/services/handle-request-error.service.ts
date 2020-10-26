@@ -9,6 +9,7 @@ export class HandleRequestErrorService {
 
   private defaultMessage = {
     404: 'Não encontrado',
+    403: 'Houve um erro',
   }
 
   constructor(
