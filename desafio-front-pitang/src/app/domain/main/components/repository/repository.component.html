@@ -12,7 +12,7 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <ag-grid-angular style="width: 100%" [ngStyle]="{'height': !userRepositories ? '43vh' : '41vh'}"
+    <ag-grid-angular style="width: 100%" [ngStyle]="{'height': !userRepositories ? '43vh' : '51vh'}"
         class="ag-theme-alpine" [rowData]="repositoryList" [columnDefs]="columnDefs">
     </ag-grid-angular>
     <div class="mt10" *ngIf="!userRepositories">
